@@ -20,6 +20,10 @@ class Calculator {
             throw IllegalArgumentException("Cannot divide by zero.")
         }
     }
+
+    fun remainder(a: Double, b: Double): Double {
+        return a % b
+    }
 }
 
 fun main() {
@@ -44,4 +48,8 @@ fun main() {
     } catch (e: IllegalArgumentException) {
         println("오류: ${e.message}")
     }
+
+    // 나머지 연산
+    val remainder = calculator.remainder(4.0, 1.0)
+    println("나머지: $remainder")
 }
